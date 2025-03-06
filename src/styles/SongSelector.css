@@ -1,0 +1,107 @@
+.song-selector-outer {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.125rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 100%;
+  border-radius: 1.125rem;
+  padding: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  --gradientborder-size: 1px;
+  --gradientBorder-gradient: linear-gradient(
+    to bottom right,
+    hsla(0, 0%, 100%, 0.07),
+    transparent
+  );
+}
+.song-selector-outer::before,
+.song-selector-inner::before {
+  content: "";
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: inherit;
+  padding: var(--gradientBorder-size, 1px);
+  background: var(--gradientBorder-gradient);
+  -webkit-mask: linear-gradient(#000, #000) content-box,
+    linear-gradient(#000, #000);
+  mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.song-selector-inner {
+  position: relative;
+  overflow: hidden;
+  --gradientBorder-size: 1px;
+  --gradientBorder-gradient: linear-gradient(
+    to bottom right,
+    hsla(0, 0%, 100%, 0.17),
+    transparent
+  );
+
+  background: linear-gradient(
+    134deg,
+    hsla(0, 0%, 100%, 0.08),
+    hsla(0, 0%, 100%, 0.02),
+    hsla(0, 0%, 100%, 0) 55%
+  );
+  isolation: isolate;
+  border-radius: 0.625rem;
+  padding: 1rem 1rem;
+}
+
+.song-list {
+  flex: 1;
+  overflow-y: auto;
+
+  max-height: calc(100% - 3rem);
+}
+.song-list-header {
+  display: grid;
+  grid-template-columns: 1.5rem repeat(12, 1fr) 3rem;
+  gap: 1rem;
+  padding: 0.75rem;
+
+  border-bottom: 1px solid var(--color-border-tertiary);
+}
+.song-list-header p {
+  color: var(--color-text-tertiary);
+}
+
+#song-list-header-name {
+  grid-column: 2 / span var(--span-name);
+}
+#song-list-header-artist {
+  grid-column: span var(--span-artist);
+}
+#song-list-header-playlist {
+  grid-column: span var(--span-playlist);
+}
+#song-list-header-duration {
+  grid-column: span var(--span-duration);
+}
+@media only screen and (max-width: 768px) {
+  #song-list-header-playlist {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #song-list-header-artist {
+    display: none;
+  }
+}
+@media only screen and (max-width: 350px) {
+  #song-list-header-duration {
+    display: none;
+  }
+}

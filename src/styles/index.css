@@ -1,0 +1,94 @@
+:root {
+  background-color: #080b0a;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  --page-max-width: 1024px;
+  --page-padding-left: max(
+    env(safe-area-inset-left),
+    var(--page-padding-inline)
+  );
+  --page-padding-right: max(
+    env(safe-area-inset-right),
+    var(--page-padding-inline)
+  );
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(97, 106, 115, 0.12) 40%,
+    rgba(97, 106, 115, 0.12) 60%,
+    rgba(97, 106, 115, 0)
+  );
+}
+
+#root {
+  height: 100vh;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+p {
+  margin: 0;
+  color: var(--color-text-primary);
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 590;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 590;
+}
+h3 {
+  font-size: 1.125rem;
+}
+p {
+  font-size: 1rem;
+}
+p.small {
+  font-size: 0.875rem;
+}
+
+button {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  accent-color: var(--color-brand-bg);
+  cursor: pointer;
+}
+svg {
+  color: var(--color-fg-primary);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 768px and below) */
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}

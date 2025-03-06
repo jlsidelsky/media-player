@@ -1,0 +1,45 @@
+.playlist-selector {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.playlist-selector-buttons {
+  display: flex;
+  flex-flow: row;
+  gap: 0.75rem;
+}
+.playlist-selector-buttons button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+
+.playlist-selector-buttons h3 {
+  color: var(--color-text-tertiary);
+  font-weight: 500;
+}
+
+.playlist-selector-buttons .active {
+  background-color: var(--color-fg-primary);
+}
+.playlist-selector-buttons .active > h3 {
+  color: var(--color-bg-primary);
+}
+@media only screen and (max-width: 425px) {
+  .playlist-selector {
+    flex-flow: column;
+    justify-content: unset;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .playlist-selector-buttons {
+    display: none;
+  }
+}

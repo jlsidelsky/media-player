@@ -1,0 +1,101 @@
+:root {
+  --span-number: 1;
+  --span-name: 6;
+  --span-artist: 3;
+  --span-duration: 1;
+  --span-playlist: 3;
+}
+
+.song-row {
+  display: grid;
+  grid-template-columns: 1.5rem repeat(12, 1fr) 3rem;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 1.25rem 0.75rem;
+  border-radius: 0.5rem;
+}
+.song-row-unselected {
+  transition: background 0.2s;
+  background-image: linear-gradient(
+    to right,
+    var(--color-border-primary) 50%,
+    hsla(0, 0%, 100%, 0) 0
+  );
+  background-position: bottom;
+  background-size: 0.5rem 1px;
+  background-repeat: repeat-x;
+}
+.song-row > p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.song-row-unselected:hover {
+  background: hsla(0, 0%, 100%, 0.05);
+}
+.song-row-unselected:last-child {
+  background-image: none;
+}
+.song-row-selected {
+  background-color: var(--color-brand-bg);
+}
+.song-row-selected
+  > :is(.song-row-artist, .song-row-playlist, .song-row-duration) {
+  color: var(--color-text-secondary);
+}
+
+.song-row-number {
+  grid-column: span var(--span-number);
+  transition: transform 0.2s ease-in-out;
+  text-align: right;
+}
+.song-row-name {
+  grid-column: span var(--span-name);
+  font-weight: 550;
+}
+.song-row-artist {
+  grid-column: span var(--span-artist);
+  color: var(--color-text-quaternary);
+  font-weight: 400;
+}
+.song-row-playlist {
+  grid-column: span var(--span-playlist);
+  color: var(--color-text-quaternary);
+  font-weight: 400;
+}
+.song-row-duration {
+  grid-column: span var(--span-duration);
+  color: var(--color-text-quaternary);
+  font-weight: 300;
+}
+
+/* Small devices (portrait tablets and large phones, 768px and below) */
+@media only screen and (max-width: 768px) {
+  :root {
+    --span-number: 1;
+    --span-name: 8;
+    --span-artist: 4;
+    --span-duration: 1;
+  }
+  .song-row-playlist {
+    display: none;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  :root {
+    --span-name: 12;
+  }
+  .song-row-artist {
+    display: none;
+  }
+}
+/* Extra small phones (350px and down) */
+@media only screen and (max-width: 350px) {
+  .song-row-duration {
+    display: none;
+  }
+  :root {
+    --span-name: 13;
+  }
+}

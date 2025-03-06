@@ -1,0 +1,11 @@
+.progress-bar-times > p {
+  color: var(--color-text-quaternary);
+}
+.progress-bar input {
+  width: 100%;
+}
+.progress-bar-times {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}

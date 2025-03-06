@@ -1,0 +1,27 @@
+#settings-desktop {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#settings-desktop div {
+  flex: 1;
+}
+
+#settings-desktop > :last-child {
+  justify-content: end;
+}
+
+#settings-mobile {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+}
+#settings-mobile > :last-child {
+  display: flex;
+  flex-flow: row;
+  gap: 2rem;
+}
+#settings-mobile > :last-child > :last-child {
+  flex: 1;
+}

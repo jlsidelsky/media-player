@@ -1,0 +1,27 @@
+.volume-slider > p {
+  color: var(--color-text-quaternary);
+}
+.volume-slider {
+  display: flex;
+  flex-flow: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.volume-slider input {
+  width: 6rem;
+}
+@media only screen and (max-width: 600px) {
+  .volume-slider input {
+    width: 100%;
+  }
+}
+
+.volume-slider svg {
+  cursor: pointer;
+  color: var(--color-fg-secondary);
+}
+
+.volume-slider svg:hover {
+  color: var(--color-fg-primary);
+}

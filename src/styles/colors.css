@@ -1,0 +1,26 @@
+:root {
+  --color-bg-primary: #08090a;
+  --color-bg-secondary: #1c1c1f;
+  --color-bg-tertiary: #232326;
+  --color-bg-quaternary: #28282c;
+  --color-bg-translucent: hsla(0, 0%, 100%, 0.05);
+
+  --color-border-primary: #23252a;
+  --color-border-secondary: #34343a;
+  --color-border-tertiary: #3e3e44;
+
+  --color-text-primary: #f7f8f8;
+  --color-text-secondary: #d0d6e0;
+  --color-text-tertiary: #8a8f98;
+  --color-text-quaternary: #62666d;
+
+  --color-brand-bg: #5e6ad2;
+
+  --color-bg-tint: #141516;
+
+  --color-fg-primary: #f7f8f8;
+  --color-fg-secondary: #d0d6e0;
+
+  --color-accent: #7170ff;
+  --color-accent-hover: #828fff;
+}

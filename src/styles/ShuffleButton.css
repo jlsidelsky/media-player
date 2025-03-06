@@ -1,0 +1,14 @@
+.shuffle-button svg {
+  height: 1.5rem;
+  color: var(--color-fg-secondary);
+}
+.shuffle-button:hover svg {
+  color: var(--color-fg-primary);
+}
+
+.shuffle-button.shuffling > svg {
+  color: var(--color-accent);
+}
+.shuffle-button.shuffling:hover > svg {
+  color: var(--color-accent-hover);
+}
